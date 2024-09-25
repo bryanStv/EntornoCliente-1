@@ -15,5 +15,16 @@
 
         </p>
     </section>
+
+    <script>
+    window.onload = function() {
+        let dni = localStorage.getItem('dni');
+        let resultado = document.getElementById("datosFinales");
+
+        if(dni) {
+            resultado.innerText = "DNI: " + dni;
+        }
+    }
+    </script>
 </body>
 </html>

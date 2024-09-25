@@ -4,28 +4,29 @@ titulo.innerHTML = "EJERCICIO 2";
 let formulario = document.getElementById("basicForm");
 let resultado = document.getElementById("resultadoEJ2");
 
-function tratarDatos(){
-    let dni = document.getElementById("dni").value;
+let dni = document.getElementById("dni").value;
+let currentURL = location.href;
 
-    if(dni == ''){
-        alert("No se ha introducido DNI");
-        document.getElementById("dni").focus();
+function existDNI(){
+    if(dni == '' || dni == null){
         return false;
     }else{
-        window.location.href = "../formulario2.html";
-        let resultado = document.getElementById("datosFinales");
-        resultado.innerText = "DNI: "+ dni;
+        return true;
     }
 };
 
 formulario.addEventListener("submit", (event) => {
-    if(tratarDatos == false){
-        event.preventDefault();
+    if(existDNI() == false){
+        alert("No se ha introducido DNI");
+        document.getElementById("dni").focus();
+        console.log("false");
+    }else{
+        console.log("true");
+        resultado.innerText = "DNI: "+ dni + " --> " + 
+        currentURL.split('?')[0] + "?dni=" + dni;
     }
 
-    tratarDatos();
-
-    sendData();
+    event.preventDefault();
 });
 
 /*var titulo = document.getElementById("t1");
