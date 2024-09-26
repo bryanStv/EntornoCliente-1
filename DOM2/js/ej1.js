@@ -14,9 +14,13 @@ function insertParrafo(){
 
 function remplazarParrafo(){
     let parent = document.getElementById('ej-aCh');
-    let Newparrafo = document.createElement('p');
+    let newParrafo = document.createElement('p');
     let texto = document.createTextNode('Párrafo reemplazado');
-    parrafo.appendChild(texto)
-    let parrafoPrimerHijo = parent.getElementsByTagName('p')[0];
-    parrafoPrimerHijo.replace(Newparrafo,parrafoPrimerHijo);
+    newParrafo.appendChild(texto)
+    let parrafoPrimerHijo = parent.getElementsByTagName('p')[1];
+
+    if (parrafoPrimerHijo) {
+        parrafoPrimerHijo.replaceWith(newParrafo);
+    }
 }
+
