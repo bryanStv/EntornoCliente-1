@@ -24,3 +24,18 @@ function remplazarParrafo(){
     }
 }
 
+function borrarParrafo(){
+    let parent = document.getElementById('ej-aCh');
+    let parrafoPrimerHijo = parent.getElementsByTagName('p')[1];
+
+    if(parrafoPrimerHijo){
+        parent.removeChild(parrafoPrimerHijo);
+    }
+}
+
+function clonarDiv(){
+    let element = document.getElementById('ej-aCh');
+    let copia = element.cloneNode(true);
+
+    element.appendChild(copia);
+}
