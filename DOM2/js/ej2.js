@@ -41,3 +41,22 @@ function clonarLista(){
 
     clonado.appendChild(copia);
 }
+
+function AddSubLista(){
+    let element = document.getElementById('listaelemen').getElementsByTagName('li')[0];
+    let lista = document.createElement('ul'); 
+    let sublista = document.createElement('li');
+    let animal = document.createTextNode('salvaje');
+    sublista.appendChild(animal);
+    lista.append(sublista);
+    element.appendChild(lista);
+}
+
+function AddSubListaInner(){
+    let element = document.getElementById('listaelemen').getElementsByTagName('li')[0];
+    element.innerHTML += 
+    `
+    <ul>
+        <li>Salvaje</li>
+    </ul>`;
+}
