@@ -1,3 +1,4 @@
+//EJERCICIO 3
 function numeroEnlaces(){
     let enlaces = document.getElementsByTagName('a');
     alert('Número de enlaces: '+enlaces.length);
@@ -45,5 +46,18 @@ function referenciasEnlacesEnParrafo(parrafo){
         return totalReferencias;
     }else{
         return 0;
+    }
+}
+
+//EJERCICIO 4
+
+function parrafosColor(color){
+    let parrafos = document.getElementById('contenedor').getElementsByTagName('p');
+    for (let parrafo of parrafos) {
+        if(color == 'green'){
+            parrafo.setAttribute('style','background-color:green');
+        }else{
+            parrafo.setAttribute('style','background-color:transparent;')
+        }
     }
 }
