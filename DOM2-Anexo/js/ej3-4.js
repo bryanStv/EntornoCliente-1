@@ -55,9 +55,9 @@ function parrafosColor(color){
     let parrafos = document.getElementById('contenedor').getElementsByTagName('p');
     for (let parrafo of parrafos) {
         if(color == 'green'){
-            parrafo.setAttribute('style','background-color:green');
+            parrafo.setAttribute('style','background-color:green; color:white;');
         }else{
-            parrafo.setAttribute('style','background-color:transparent;')
+            parrafo.setAttribute('style','background-color:transparent; color:black;')
         }
     }
 }
