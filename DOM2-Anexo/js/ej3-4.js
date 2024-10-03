@@ -1,38 +1,49 @@
+var resultado = document.getElementById('resultado');
+
 //EJERCICIO 3
 function numeroEnlaces(){
+    while(resultado.firstChild){
+        resultado.removeChild(resultado.firstChild);
+    }
     let enlaces = document.getElementsByTagName('a');
-    alert('Número de enlaces: '+enlaces.length);
+    let numEnlaces = document.createTextNode('Número de enlaces: '+enlaces.length);
+    resultado.appendChild(numEnlaces);
 }
 
 function referenciaEnlaces(){
     let totalReferencias = 0;
     let referencias = document.getElementsByTagName('a');
+    let textoReferencias = '';
 
     for(let i = 0; i < referencias.length; i++){
         if(referencias[i].hasAttribute('href')){
             totalReferencias++;
+            textoReferencias += 'nº'+totalReferencias+': '+referencias[i]+'\n';
+
+            resultado.innerText = textoReferencias;
         }
     }
-    
-    alert('Número total de referencias: '+totalReferencias);
 }
 
 function numEnlacesParrafo(){
     let contenedor = document.getElementById('contenedor');
-    let resultado = '';
+    let result = '';
 
     if(contenedor.hasChildNodes()){
         let parrafos = contenedor.getElementsByTagName('p');
         let contador = 0;
 
         while(contador < parrafos.length){
-            alert('Parrafo nº'+(contador+1)+': '+referenciasEnlacesEnParrafo(parrafos[contador]));
+            result += 'Parrafo nº'+(contador+1)+': '+referenciasEnlacesEnParrafo(parrafos[contador])+'\n';
             contador++;
         }
     }
+
+    resultado.innerText = result;
 }
 
 function referenciasEnlacesEnParrafo(parrafo){
+    let textoFinal = '';
     if(parrafo.hasChildNodes){
         let totalReferencias = 0;
         let referencias = parrafo.getElementsByTagName('a');
@@ -40,10 +51,11 @@ function referenciasEnlacesEnParrafo(parrafo){
         for(let i = 0; i < referencias.length; i++){
             if(referencias[i].hasAttribute('href')){
                 totalReferencias++;
+                textoFinal += 'nº'+ totalReferencias+': '+referencias[i]+'\n';
             }
         }
 
-        return totalReferencias;
+        return textoFinal;
     }else{
         return 0;
     }
