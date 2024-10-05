@@ -92,3 +92,32 @@ for(let boton of botones){
         alert('Haz pulsado sobre el botón');
     })  
 }
+
+//Ejercicio 7
+
+function mostrarHora(){
+    let fechaHora = new Date();
+
+    let hora = fechaHora.getHours();
+    let min = fechaHora.getMinutes();
+    let seg = fechaHora.getSeconds();
+
+    if(hora < 10){
+        hora = '0' + hora;
+    }if(min < 10){
+        min = '0' + min;
+    }if(seg < 10){
+        seg = '0' + seg;
+    }
+
+    return document.getElementById('contenedorRelojes').innerHTML = `${hora}:${min}:${seg}`
+}
+
+setInterval(mostrarHora, 1000)
+
+//alert('“Página que contiene un reloj digital”');
+
+/*window.addEventListener('beforeunload',function(event){
+    //event.preventDefault();
+    event.returnValue = 'Página cancelada';
+})*/
