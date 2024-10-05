@@ -66,3 +66,29 @@ if(esNavegadorAntiguo()){
         cambiarTamaño(elem,12);
     })
 }
+
+//Ejercicio 5
+var formulario = document.forms[0];
+
+formulario.addEventListener('submit',function(event){
+    event.preventDefault();
+    alert(formulario.elements['cTexto'].value)
+})
+
+function esNumero(event){
+    let resultado = event.keyCode >= 48 && event.keyCode <= 57;
+    //resultado ?  console.log('Es un número') : console.log('No es un número');
+    if(!resultado && event.keyChar != 'Backspace'){
+        event.preventDefault();
+    }
+}
+
+//Ejercicio 6
+let botones = document.getElementsByTagName('button');
+
+for(let boton of botones){
+    boton.addEventListener('click',function(event){
+        event.preventDefault();
+        alert('Haz pulsado sobre el botón');
+    })  
+}
