@@ -11,23 +11,19 @@ function cambiarTamaño(elem,tam){
 
 //Ejercicio 1
 function letraNormal(elemento){
-    //elemento.style.fontSize = '12pt';
     cambiarTamaño(elemento,12);
 };
 
 function letraGrande(elemento){
-   //elemento.style.fontSize = '16pt';
    cambiarTamaño(elemento,16);
 };
 
 //Ejercicio 2
 contenedor2.addEventListener('mouseover',function(){
-    //contenedor2.style.fontSize = '16pt';
     cambiarTamaño(contenedor2,16);
 });
 
 contenedor2.addEventListener('mouseout',function(){
-    //contenedor2.style.fontSize = '12pt';
     cambiarTamaño(contenedor2,12);
 });
 
