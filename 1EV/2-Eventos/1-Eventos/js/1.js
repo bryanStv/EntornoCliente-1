@@ -32,7 +32,23 @@ contenedor2.addEventListener('mouseout',function(){
 });
 
 //Ejercicio 3
-contenedor3.addEventListener('mouseover',function(event){
+function evento3(event){
+    switch(event.type){
+        case 'mouseover':
+            cambiarTamaño(event.target,16);
+            break;
+        case 'mouseout':
+            cambiarTamaño(event.target,12);
+            break;
+    }
+}
+
+window.onload = function() {
+    contenedor3.onmouseover = evento3;
+    contenedor3.onmouseout = evento3;
+}
+
+/*contenedor3.addEventListener('mouseover',function(event){
     //event.target.style.fontSize = '16pt';
     cambiarTamaño(event.target,16);
 });
@@ -40,7 +56,9 @@ contenedor3.addEventListener('mouseover',function(event){
 contenedor3.addEventListener('mouseout',function(event){
     //event.target.style.fontSize = '12pt';
     cambiarTamaño(event.target,12);
-});
+});*/
+
+
 
 //Ejercicio 4
 function esNavegadorAntiguo() {
@@ -118,6 +136,6 @@ setInterval(mostrarHora, 1000)
 //alert('“Página que contiene un reloj digital”');
 
 /*window.addEventListener('beforeunload',function(event){
-    //event.preventDefault();
-    event.returnValue = 'Página cancelada';
+    event.preventDefault();
+    event.alert('Página Cancelada');
 })*/
