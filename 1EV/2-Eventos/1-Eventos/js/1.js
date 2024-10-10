@@ -35,10 +35,10 @@ contenedor2.addEventListener('mouseout',function(){
 function evento3(event){
     switch(event.type){
         case 'mouseover':
-            cambiarTamaño(event.target,16);
+            cambiarTamaño(this,16);
             break;
         case 'mouseout':
-            cambiarTamaño(event.target,12);
+            cambiarTamaño(this,12);
             break;
     }
 }
@@ -133,9 +133,10 @@ function mostrarHora(){
 
 setInterval(mostrarHora, 1000)
 
-//alert('“Página que contiene un reloj digital”');
+alert('“Página que contiene un reloj digital”');
 
-/*window.addEventListener('beforeunload',function(event){
+window.addEventListener('beforeunload',function(event){
+    //No se puede utilizar, solo en navegadores antiguos
     event.preventDefault();
-    event.alert('Página Cancelada');
-})*/
+    event.alert('Página cancelada');
+})
