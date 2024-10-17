@@ -1,6 +1,6 @@
-//EJERCICIO 1
-
 window.onload = function() {
+    //EJERCICIO 1
+
     const formulario1 = document.forms[0];
 
     formulario1.addEventListener('submit',function(event){
@@ -13,7 +13,7 @@ window.onload = function() {
 
         if(nombre == '' || email == '' || mensaje == ''){
             event.preventDefault();
-            
+
             datos = 'NO SE HA PRODUCIDO ENVIO';
         }else{
             event.preventDefault();
@@ -29,7 +29,15 @@ window.onload = function() {
         resultado1.innerHTML = datos;
 
     });
-}
 
-//EJERCICIO 2
+    //EJERCICIO 2
+    const enlace = document.getElementById('enlace');
+
+    enlace.addEventListener('click',function(event){
+        event.preventDefault();
+
+        enlace.setAttribute('href','https://www.duckduckgo.com');
+        window.location.href = enlace;
+    })
+}
 
