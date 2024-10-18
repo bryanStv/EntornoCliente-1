@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/formulario.js"></script>
+    <title>Formularios</title>
+</head>
+<body>
+    <form id="formulario1" action="" method="get">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" value=""/><br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido" name="apellido" value=""/><br>
+        <label for="telefono">Telefono: </label>
+        <input type="text" id="telefono" name="telefono" value=""/><br>
+        <label for="dni">DNI: </label>
+        <input type="text" id="dni" name="dni" value=""/><br>
+        <label for="edad">Edad: </label>
+        <input type="text" id="edad" name="edad" value=""/><br>
+
+        <label for="sexo">Sexo: </label>
+            <br><input type="radio" id="hombre" value="hombre" name="sexo" checked/>Hombre
+            <br><input type="radio" id="mujer" value="mujer" name="sexo"/>Mujer
+        <br><label for="foto">Incluir mi foto: </label>
+        <input type="file" id="foto" value="" name="foto"/><br>
+        <input type="checkbox" name="publicidad" id="publi" checked>
+        <label for="publicidad">Enviar publicidad</label><br>
+
+        <label for="aficion">Elige una afición favorita: </label>
+        <select name="aficion" id="aficion">
+            <option value="musica" selected="selected">Musica</option>
+            <option value="lectura">Lectura</option>
+            <option value="deporte">Deporte</option>
+        </select><br>
+        <label for="observaciones">Observaciones: </label><br>
+        <textarea rows="5" cols="30" name="observaciones"></textarea><br>
+
+
+        <button type="submit">Guardar cambios</button>
+        <button type="reset">Borrar los datos introducidos</button>
+    </form>
+</body>
+</html>
