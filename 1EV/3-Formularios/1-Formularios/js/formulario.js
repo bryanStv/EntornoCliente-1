@@ -77,6 +77,15 @@ window.onload = function(){
     })
 
     //EJ3
-    
+    const coloresRadio = document.getElementsByName('coloresRadio');
+
+    for(let color of coloresRadio){
+        color.addEventListener('change',function(){
+            const seleccion = color.value;
+            pColor.style.color = seleccion;
+        })
+    }
+
+
 }
 
