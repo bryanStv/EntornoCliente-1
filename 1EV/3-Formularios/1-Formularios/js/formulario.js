@@ -48,8 +48,23 @@ window.onload = function(){
         }
     })
 
+    //Parte 5
+    const dni = document.getElementById('dni');
+    const telefono = document.getElementById('telefono');
+    
+    const expReg = /^\d{9}$/;
+
     formulario.addEventListener('submit',function(e){
-       
+
+        if(dni.value == ''){
+            e.preventDefault();
+            alert('El campo DNI no puede estar vacio');
+        }
+
+        if(!expReg.test(telefono.value)){
+            e.preventDefault();
+            alert('El telefono debe tener 9 números');
+        }
     })
 }
 
