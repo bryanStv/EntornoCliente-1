@@ -7,38 +7,58 @@
     <title>Formularios</title>
 </head>
 <body>
-    <form id="formulario1" action="" method="get">
-        <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" name="nombre" value=""/><br>
-        <label for="apellido">Apellido: </label>
-        <input type="text" id="apellido" name="apellido" value=""/><br>
-        <label for="telefono">Telefono: </label>
-        <input type="text" id="telefono" name="telefono" value=""/><br>
-        <label for="dni">DNI: </label>
-        <input type="text" id="dni" name="dni" value=""/><br>
-        <label for="edad">Edad: </label>
-        <input type="text" id="edad" name="edad" value=""/><br>
+    <div id="ej1">
+        <form id="formulario1" action="" method="get">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" value=""/><br>
+            <label for="apellido">Apellido: </label>
+            <input type="text" id="apellido" name="apellido" value=""/><br>
+            <label for="telefono">Telefono: </label>
+            <input type="text" id="telefono" name="telefono" value=""/><br>
+            <label for="dni">DNI: </label>
+            <input type="text" id="dni" name="dni" value=""/><br>
+            <label for="edad">Edad: </label>
+            <input type="text" id="edad" name="edad" value=""/><br>
+    
+            <label for="sexo">Sexo: </label>
+                <br><input type="radio" id="hombre" value="hombre" name="sexo" checked/>Hombre
+                <br><input type="radio" id="mujer" value="mujer" name="sexo"/>Mujer
+            <br><label for="foto">Incluir mi foto: </label>
+            <input type="file" id="foto" value="" name="foto"/><br>
+            <input type="checkbox" name="publicidad" id="publi" checked>
+            <label for="publicidad">Enviar publicidad</label><br>
+    
+            <label for="aficion">Elige una afición favorita: </label>
+            <select name="aficion" id="aficion">
+                <option value="musica" selected="selected">Musica</option>
+                <option value="lectura">Lectura</option>
+                <option value="deporte">Deporte</option>
+            </select><br>
+            <label for="observaciones">Observaciones: </label><br>
+            <textarea rows="5" cols="30" name="observaciones" id="observaciones"></textarea><br>
+    
+    
+            <button type="submit">Guardar cambios</button>
+            <button type="reset">Borrar los datos introducidos</button>
+        </form>
+    </div>
+    
+    <br><br>
 
-        <label for="sexo">Sexo: </label>
-            <br><input type="radio" id="hombre" value="hombre" name="sexo" checked/>Hombre
-            <br><input type="radio" id="mujer" value="mujer" name="sexo"/>Mujer
-        <br><label for="foto">Incluir mi foto: </label>
-        <input type="file" id="foto" value="" name="foto"/><br>
-        <input type="checkbox" name="publicidad" id="publi" checked>
-        <label for="publicidad">Enviar publicidad</label><br>
+    <div id="ej2">
+        <p id="pColor">Este párrafo cambiará de color con la opción
+            seleccionada del cuadro de lista</p>
+        <select name="colores" id="colores">
+            <option value="green" selected="selected">Verde</option>
+            <option value="blue">Azul</option>
+            <option value="red">Rojo</option>
+        </select>
+    </div>
 
-        <label for="aficion">Elige una afición favorita: </label>
-        <select name="aficion" id="aficion">
-            <option value="musica" selected="selected">Musica</option>
-            <option value="lectura">Lectura</option>
-            <option value="deporte">Deporte</option>
-        </select><br>
-        <label for="observaciones">Observaciones: </label><br>
-        <textarea rows="5" cols="30" name="observaciones" id="observaciones"></textarea><br>
+    <br><br>
 
-
-        <button type="submit">Guardar cambios</button>
-        <button type="reset">Borrar los datos introducidos</button>
-    </form>
+    <div id="ej3">
+        
+    </div>
 </body>
 </html>

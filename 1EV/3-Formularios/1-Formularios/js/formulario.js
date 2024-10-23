@@ -66,5 +66,17 @@ window.onload = function(){
             alert('El telefono debe tener 9 números');
         }
     })
+
+    //EJ2
+    const selectorColor = document.getElementById('colores');
+    const pColor = document.getElementById('pColor');
+
+    selectorColor.addEventListener('change',function(){
+        const seleccion = selectorColor.value;
+        pColor.style.color = seleccion;
+    })
+
+    //EJ3
+    
 }
 
