@@ -86,6 +86,30 @@ window.onload = function(){
         })
     }
 
+    //EJ4
+    const checkboxes = document.getElementsByName('checkEj4');
+
+    function actualizar(){
+        const parrafo4 = document.getElementById('parrafoEj4');
+
+        if(checkboxes[0].checked){
+            parrafo4.style.fontWeight = 'bold';
+        }else{
+            parrafo4.style.fontWeight = 'normal';
+        }
+    
+        if(checkboxes[1].checked){
+            parrafo4.style.fontStyle = 'italic';
+        }else{
+            parrafo4.style.fontStyle = 'normal';
+        }
+    }
+
+    for(let checkbox of checkboxes){
+        checkbox.addEventListener('change',function(){
+            actualizar();
+        })
+    }
 
 }
 
